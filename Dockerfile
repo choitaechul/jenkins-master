@@ -1,5 +1,5 @@
 # Dockerfile for Jenkins Master
-FROM Jenkins
+FROM jenkins
 
 RUN yum update –y
 RUN wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
