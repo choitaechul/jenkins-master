@@ -1,7 +1,8 @@
 # Dockerfile for Jenkins Master
 FROM ambakshi/amazon-linux
 
-RUN yum update && yum install wget rpm
+RUN yum update
+RUN sudo yum install wget rpm
 RUN wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 RUN rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 RUN yum install jenkins -y
